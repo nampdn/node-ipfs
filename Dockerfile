@@ -7,3 +7,7 @@ RUN apk add wget git tar && \
     wget https://dist.ipfs.io/go-ipfs/$IPFS_VERSION/$IPFS_BIN && \
     tar xvfz $IPFS_BIN && \
     mv go-ipfs/ipfs /usr/local/bin/ipfs
+
+EXPOSE 4001
+EXPOSE 5001
+EXPOSE 8080
