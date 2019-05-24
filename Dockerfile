@@ -11,3 +11,6 @@ RUN apk add wget git tar && \
 EXPOSE 4001
 EXPOSE 5001
 EXPOSE 8080
+
+ENTRYPOINT ["/usr/local/bin/ipfs"]
+CMD ["daemon", "--init"]
