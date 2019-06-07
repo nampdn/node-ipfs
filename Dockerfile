@@ -1,6 +1,6 @@
 FROM node:11-alpine
 
-ENV IPFS_VERSION=v0.4.20
+ENV IPFS_VERSION=v0.4.21
 ENV IPFS_BIN="go-ipfs_${IPFS_VERSION}_linux-386.tar.gz"
 RUN apk add wget git tar && \
     cd /tmp && \
