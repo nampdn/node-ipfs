@@ -8,6 +8,10 @@ RUN apk add wget git tar && \
     tar xvfz $IPFS_BIN && \
     mv go-ipfs/ipfs /usr/local/bin/ipfs
 
+RUN apk add jq bash
+
+COPY replicator.sh .
+
 EXPOSE 4001
 EXPOSE 5001
 EXPOSE 8080
