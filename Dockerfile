@@ -12,6 +12,11 @@ RUN apk add jq bash
 
 COPY replicator.sh .
 
+RUN crontab -l > ipfscron && \
+    echo "*/30 * * * * /bin/bash /replicator.sh" >> ipfscron && \
+    crontab ipfscron && \
+    rm ipfscron
+
 EXPOSE 4001
 EXPOSE 5001
 EXPOSE 8080
