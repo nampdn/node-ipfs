@@ -9,11 +9,11 @@ swarm_connect() {
 
 publish() {
   local hash=$(ipfs name resolve $IPNS_DOMAIN)
-  if [ -z "$var" ]
+  if [ -z "$hash" ]
   then
-    echo "\$var is empty"
+    echo "\$hash is empty"
   else
-    echo "\$var is NOT empty"
+    echo "\$hash is NOT empty"
     echo "Found ${hash} at TXT record ${IPNS_DOMAIN}"
     swarm_connect $hash
     echo ""
